@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon4.png') }}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    nav .nav li a{
+     color: white !important;
+     }   
+     .navbar {
+       background: linear-gradient(to right, #00a65a, #007e73); /* Adjust gradient colors */
+     }
+     .text-white{
+       color: white;
+     }
+     .card:hover {
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           transform: translateY(-4px);
+           transition: box-shadow 0.3s, transform 0.3s;
+       }
+       .center {
+     margin: auto;
+     width: 50%;
+     padding: 10px;
+   }
+   .warning
+   {
+    top:50%;
+    background-color:rgb(227, 76, 99);
+    color: black;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    text-align: center;
+    margin-bottom: 50px;
+   }
+  
+   </style>
+</head>
+<body>
+    <nav class="navbar" style="background-color: #00a65a">
+        <div class="d-flex">
+          <i class="fa-solid fa-house-medical fa-2x text-white" style="margin-left: 10px"></i>
+          <h2 class="text-white" style="margin-left: 10px;margin-bottom: 10px;">Skin Disease Diagonstic System</h2>
+      </div>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              {% if user and user.email %}
+              <a class="nav-link" href="/logout">Logout</a>
+               {% else %}
+               <a class="nav-link" href="/login">Login</a>
+                {% endif %}
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/predict">Predict</a>
+            </li>
+           
+              <li class="nav-item">
+                <a class="nav-link" href="/Health_Tips">Health Tips</a>
+              </li>
+            
+          </ul>
+    </nav>
+<div class="container">
+    <div class=" row justify-content-center">
+        <div class="col-sm-6 mt-4">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="notification is-danger">
+                <h2 class="warning">{{ messages[0] }}.</h2> 
+            </div>
+            {% endif %}
+            {% endwith %}
+            <h2 style="margin-bottom: 30px;margin-top:30px">Login form</h2>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+                </div>
+
+                <button type="submit" class="btn btn-dark">Submit</button>
+                <a href="/register" class="btn btn-primary">Register</a>
+            </form>
+        </div>
+
+    </div>
+  
+</div>
+
+
+
+
+</body>
+</html>

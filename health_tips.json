@@ -1,0 +1,36 @@
+  {
+            "Melanocytic nevi (nv)": [
+                "Regularly examine your skin for any changes in moles or new growths.",
+                "Protect your skin from the sun by wearing sunscreen with a high SPF and seeking shade during peak sun hours.",
+                "Schedule regular skin screenings with a dermatologist to monitor for any signs of melanocytic nevi (nv)."
+            ],
+            "Melanoma (mel)": [
+                "Be vigilant about changes in existing moles or the appearance of new moles.",
+                "Seek immediate medical attention if you notice any suspicious changes in your skin, such as asymmetry, irregular borders, uneven color, or changes in size or shape."
+            ],
+            "Benign keratosis-like lesions (bkl)": [
+                "Moisturize your skin regularly to keep it hydrated and prevent dryness.",
+                "Avoid picking or scratching at benign keratosis-like lesions (bkl) to prevent irritation or infection.",
+                "Consult with a dermatologist for proper diagnosis and management of benign keratosis-like lesions."
+            ],
+            "Basal cell carcinoma (bcc)": [
+                "Protect your skin from the sun to reduce the risk of basal cell carcinoma (bcc) by wearing protective clothing, seeking shade, and using sunscreen with a high SPF.",
+                "Avoid tanning beds and excessive sun exposure to minimize the risk of developing basal cell carcinoma.",
+                "Schedule regular skin checks with a dermatologist for early detection and treatment of any suspicious lesions."
+            ],
+            "Actinic keratoses (akiec)": [
+                "Protect your skin from the sun to prevent actinic keratoses (akiec) by wearing sunscreen, protective clothing, and seeking shade.",
+                "Avoid prolonged exposure to ultraviolet (UV) radiation, including tanning beds and sunlamps.",
+                "Consult with a dermatologist for proper diagnosis and treatment of actinic keratoses."
+            ],
+            "Vascular lesions (vasc)": [
+                "Manage underlying health conditions that may contribute to vascular lesions (vasc), such as high blood pressure or diabetes.",
+                "Maintain a healthy lifestyle with regular exercise and a balanced diet to support overall skin health.",
+                "Consult with a dermatologist for evaluation and treatment options for vascular lesions."
+            ],
+            "Dermatofibroma (df)": [
+                "Protect your skin from irritation or injury to reduce the risk of developing dermatofibromas (df).",
+                "Avoid picking or scratching at skin lesions, and handle skin gently during skincare routines.",
+                "Consult with a dermatologist for proper diagnosis and management of dermatofibromas."
+            ]
+        }
